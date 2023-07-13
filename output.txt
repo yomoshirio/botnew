@@ -1,0 +1,603 @@
+2022-04-22 02:50:18.152 | INFO     | utils.misc.logger:<module>:5 - START LOGGER
+2022-04-22 02:50:18.793 | DEBUG    | __main__:<module>:12 - VIP Market | Started
+Task exception was never retrieved
+future: <Task finished name='Task-342' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=UserIsBotError("Bots can't send messages to other bots (caused by SendMessageRequest)")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/tgBot/handlers/users/text.py", line 39, in crypto_handler
+    await BTCPayment().receipt_parser(bot, msg.from_user.id, msg.text)
+  File "/root/tgBot/utils/payments/btc.py", line 45, in receipt_parser
+    await self.banker_btc(bot, user_id, code)
+  File "/root/tgBot/utils/payments/btc.py", line 50, in banker_btc
+    await client.send_message(self.banker, f'/start {cheque}')
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/messages.py", line 872, in send_message
+    result = await self(request)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 84, in _call
+    result = await future
+telethon.errors.rpcerrorlist.UserIsBotError: Bots can't send messages to other bots (caused by SendMessageRequest)
+/usr/local/lib/python3.8/dist-packages/aiogram/types/mixins.py:40: DeprecationWarning: destination parameter is deprecated, please use destination_dir or destination_file.
+  warn_deprecated(
+/usr/local/lib/python3.8/dist-packages/aiohttp/client.py:1138: DeprecationWarning: ssl_context is deprecated, use ssl=context instead
+  self._resp = await self._coro
+/usr/local/lib/python3.8/dist-packages/aiogram/types/mixins.py:40: DeprecationWarning: destination parameter is deprecated, please use destination_dir or destination_file.
+  warn_deprecated(
+/usr/local/lib/python3.8/dist-packages/aiohttp/client.py:1138: DeprecationWarning: ssl_context is deprecated, use ssl=context instead
+  self._resp = await self._coro
+Task exception was never retrieved
+future: <Task finished name='Task-25296' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=UserIsBotError("Bots can't send messages to other bots (caused by SendMessageRequest)")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/tgBot/handlers/users/text.py", line 39, in crypto_handler
+    await BTCPayment().receipt_parser(bot, msg.from_user.id, msg.text)
+  File "/root/tgBot/utils/payments/btc.py", line 45, in receipt_parser
+    await self.banker_btc(bot, user_id, code)
+  File "/root/tgBot/utils/payments/btc.py", line 50, in banker_btc
+    await client.send_message(self.banker, f'/start {cheque}')
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/messages.py", line 872, in send_message
+    result = await self(request)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 84, in _call
+    result = await future
+telethon.errors.rpcerrorlist.UserIsBotError: Bots can't send messages to other bots (caused by SendMessageRequest)
+Task exception was never retrieved
+future: <Task finished name='Task-25308' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=UserIsBotError("Bots can't send messages to other bots (caused by SendMessageRequest)")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/tgBot/handlers/users/text.py", line 39, in crypto_handler
+    await BTCPayment().receipt_parser(bot, msg.from_user.id, msg.text)
+  File "/root/tgBot/utils/payments/btc.py", line 45, in receipt_parser
+    await self.banker_btc(bot, user_id, code)
+  File "/root/tgBot/utils/payments/btc.py", line 50, in banker_btc
+    await client.send_message(self.banker, f'/start {cheque}')
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/messages.py", line 872, in send_message
+    result = await self(request)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 84, in _call
+    result = await future
+telethon.errors.rpcerrorlist.UserIsBotError: Bots can't send messages to other bots (caused by SendMessageRequest)
+/usr/local/lib/python3.8/dist-packages/aiogram/types/mixins.py:40: DeprecationWarning: destination parameter is deprecated, please use destination_dir or destination_file.
+  warn_deprecated(
+/usr/local/lib/python3.8/dist-packages/aiohttp/client.py:1138: DeprecationWarning: ssl_context is deprecated, use ssl=context instead
+  self._resp = await self._coro
+Task exception was never retrieved
+future: <Task finished name='Task-39556' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=UserIsBotError("Bots can't send messages to other bots (caused by SendMessageRequest)")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/tgBot/handlers/users/text.py", line 39, in crypto_handler
+    await BTCPayment().receipt_parser(bot, msg.from_user.id, msg.text)
+  File "/root/tgBot/utils/payments/btc.py", line 45, in receipt_parser
+    await self.banker_btc(bot, user_id, code)
+  File "/root/tgBot/utils/payments/btc.py", line 50, in banker_btc
+    await client.send_message(self.banker, f'/start {cheque}')
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/messages.py", line 872, in send_message
+    result = await self(request)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 84, in _call
+    result = await future
+telethon.errors.rpcerrorlist.UserIsBotError: Bots can't send messages to other bots (caused by SendMessageRequest)
+Task exception was never retrieved
+future: <Task finished name='Task-39577' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=UserIsBotError("Bots can't send messages to other bots (caused by SendMessageRequest)")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/tgBot/handlers/users/text.py", line 39, in crypto_handler
+    await BTCPayment().receipt_parser(bot, msg.from_user.id, msg.text)
+  File "/root/tgBot/utils/payments/btc.py", line 45, in receipt_parser
+    await self.banker_btc(bot, user_id, code)
+  File "/root/tgBot/utils/payments/btc.py", line 50, in banker_btc
+    await client.send_message(self.banker, f'/start {cheque}')
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/messages.py", line 872, in send_message
+    result = await self(request)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 84, in _call
+    result = await future
+telethon.errors.rpcerrorlist.UserIsBotError: Bots can't send messages to other bots (caused by SendMessageRequest)
+Task exception was never retrieved
+future: <Task finished name='Task-39609' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=UserIsBotError("Bots can't send messages to other bots (caused by SendMessageRequest)")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/tgBot/handlers/users/text.py", line 39, in crypto_handler
+    await BTCPayment().receipt_parser(bot, msg.from_user.id, msg.text)
+  File "/root/tgBot/utils/payments/btc.py", line 45, in receipt_parser
+    await self.banker_btc(bot, user_id, code)
+  File "/root/tgBot/utils/payments/btc.py", line 50, in banker_btc
+    await client.send_message(self.banker, f'/start {cheque}')
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/messages.py", line 872, in send_message
+    result = await self(request)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 84, in _call
+    result = await future
+telethon.errors.rpcerrorlist.UserIsBotError: Bots can't send messages to other bots (caused by SendMessageRequest)
+5015465162:AAGGGFzRA0_7OJ6BfOdLAq4Ymm6FVovaXfU
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+-1001287354289
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+-1001287354289
+-1001287354289
+5078650590, 5194214731, 891483443
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+5078650590, 5194214731, 891483443
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+-1001287354289
+5
+5
+-1001287354289
+5
+-1001287354289
+5078650590, 5194214731, 891483443
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+f1c562a878da0ecc6c28c9c961ef3dc1
+5
+-1001287354289
+-1001287354289
+-1001287354289
+5078650590, 5194214731, 891483443
+adm_subcatalog:sub_90
+5078650590, 5194214731, 891483443
+5078650590, 5194214731, 891483443
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+11000
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":0.88,"data":{"ip_list":[],"period":5,"country":"ua","type":"dedicated","ip_version":4,"quantity":1}}
+11000
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":0.09,"data":{"ip_list":[],"period":5,"country":"ru","type":"dedicated","ip_version":6,"quantity":1}}
+11000
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":0.88,"data":{"ip_list":[],"period":5,"country":"ru","type":"dedicated","ip_version":4,"quantity":1}}
+11000
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":19.08,"data":{"ip_list":[],"period":360,"country":"ru","type":"dedicated","ip_version":4,"quantity":1}}
+11000
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+-1001287354289
+-1001287354289
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":1.59,"data":{"ip_list":[],"period":30,"country":"de","type":"dedicated","ip_version":4,"quantity":1}}
+11000
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+5
+5
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":0.48,"data":{"ip_list":[],"period":30,"country":"us","type":"dedicated","ip_version":6,"quantity":1}}
+11000
+-1001287354289
+-1001287354289
+-1001287354289
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+f1c562a878da0ecc6c28c9c961ef3dc1
+{"order":10100025}
+-1001287354289
+5078650590, 5194214731, 891483443
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+f1c562a878da0ecc6c28c9c961ef3dc1
+f1c562a878da0ecc6c28c9c961ef3dc1
+{"error":"You have active order with this link. Please wait until order being completed."}
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":0.88,"data":{"ip_list":[],"period":5,"country":"ua","type":"dedicated","ip_version":4,"quantity":1}}
+11000
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+-1001287354289
+f1c562a878da0ecc6c28c9c961ef3dc1
+{"error":"You have active order with this link. Please wait until order being completed."}
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+f1c562a878da0ecc6c28c9c961ef3dc1
+-1001287354289
+5078650590, 5194214731, 891483443
+f1c562a878da0ecc6c28c9c961ef3dc1
+{"error":"You have active order with this link. Please wait until order being completed."}
+f1c562a878da0ecc6c28c9c961ef3dc1
+{"order":10100415}
+-1001287354289
+-1001287354289
+-1001287354289
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":143.1,"data":{"ip_list":[],"period":270,"country":"jp","type":"dedicated","ip_version":4,"quantity":10}}
+11000
+-1001287354289
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":19.08,"data":{"ip_list":[],"period":360,"country":"cz","type":"dedicated","ip_version":4,"quantity":1}}
+11000
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":1.59,"data":{"ip_list":[],"period":30,"country":"cz","type":"dedicated","ip_version":4,"quantity":1}}
+11000
+-1001287354289
+-1001287354289
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+-1001287354289
+5
+-1001287354289
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+5078650590, 5194214731, 891483443
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+f1c562a878da0ecc6c28c9c961ef3dc1
+-1001287354289
+-1001287354289
+5078650590, 5194214731, 891483443
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+f1c562a878da0ecc6c28c9c961ef3dc1
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":0.88,"data":{"ip_list":[],"period":5,"country":"ru","type":"dedicated","ip_version":4,"quantity":1}}
+11000
+5078650590, 5194214731, 891483443
+5078650590, 5194214731, 891483443
+5078650590, 5194214731, 891483443
+5
+-1001287354289
+-1001287354289
+-1001287354289
+5078650590, 5194214731, 891483443
+5078650590, 5194214731, 891483443
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+5078650590, 5194214731, 891483443
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+f1c562a878da0ecc6c28c9c961ef3dc1
+-1001287354289
+-1001287354289
+-1001287354289
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+-1001287354289
+-1001287354289
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+-1001287354289
+-1001287354289
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":0.9,"data":{"ip_list":[],"period":30,"country":"ru","type":"shared","ip_version":4,"quantity":1}}
+11000
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+f1c562a878da0ecc6c28c9c961ef3dc1
+-1001287354289
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+f1c562a878da0ecc6c28c9c961ef3dc1
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":19.08,"data":{"ip_list":[],"period":360,"country":"ua","type":"dedicated","ip_version":4,"quantity":1}}
+11000
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+f1c562a878da0ecc6c28c9c961ef3dc1
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":0.88,"data":{"ip_list":[],"period":5,"country":"us","type":"dedicated","ip_version":4,"quantity":1}}
+11000
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":0.88,"data":{"ip_list":[],"period":5,"country":"ru","type":"dedicated","ip_version":4,"quantity":1}}
+11000
+-1001287354289
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+f1c562a878da0ecc6c28c9c961ef3dc1
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+f1c562a878da0ecc6c28c9c961ef3dc1
+-1001287354289
+-1001287354289
+-1001287354289
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+-1001287354289
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+-1001287354289
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+5078650590, 5194214731, 891483443
+5078650590, 5194214731, 891483443
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+f1c562a878da0ecc6c28c9c961ef3dc1
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+f1c562a878da0ecc6c28c9c961ef3dc1
+-1001287354289
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+11000
+-1001287354289
+-1001287354289
+5078650590, 5194214731, 891483443
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":17.28,"data":{"ip_list":[],"period":360,"country":"ru","type":"dedicated","ip_version":6,"quantity":3}}
+11000
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+4b5d4b6ecbdd05e53ba522f536633b0d
++79398013229
+-1001287354289
+-1001287354289
+-1001287354289
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+{"amount":0.9,"data":{"ip_list":[],"period":5,"country":"ru","type":"dedicated","ip_version":6,"quantity":10}}
+11000
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+f1c562a878da0ecc6c28c9c961ef3dc1
+-1001287354289
+mttx15ewy3hsxhcgae97426ajiv1gp50ls9bloic
+11000
+Task exception was never retrieved
+future: <Task finished name='Task-86368' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=UserIsBotError("Bots can't send messages to other bots (caused by SendMessageRequest)")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/tgBot/handlers/users/text.py", line 39, in crypto_handler
+    await BTCPayment().receipt_parser(bot, msg.from_user.id, msg.text)
+  File "/root/tgBot/utils/payments/btc.py", line 45, in receipt_parser
+    await self.banker_btc(bot, user_id, code)
+  File "/root/tgBot/utils/payments/btc.py", line 50, in banker_btc
+    await client.send_message(self.banker, f'/start {cheque}')
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/messages.py", line 872, in send_message
+    result = await self(request)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 84, in _call
+    result = await future
+telethon.errors.rpcerrorlist.UserIsBotError: Bots can't send messages to other bots (caused by SendMessageRequest)
+Task exception was never retrieved
+future: <Task finished name='Task-86848' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=UserIsBotError("Bots can't send messages to other bots (caused by SendMessageRequest)")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/tgBot/handlers/users/text.py", line 39, in crypto_handler
+    await BTCPayment().receipt_parser(bot, msg.from_user.id, msg.text)
+  File "/root/tgBot/utils/payments/btc.py", line 45, in receipt_parser
+    await self.banker_btc(bot, user_id, code)
+  File "/root/tgBot/utils/payments/btc.py", line 50, in banker_btc
+    await client.send_message(self.banker, f'/start {cheque}')
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/messages.py", line 872, in send_message
+    result = await self(request)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 84, in _call
+    result = await future
+telethon.errors.rpcerrorlist.UserIsBotError: Bots can't send messages to other bots (caused by SendMessageRequest)
+Task exception was never retrieved
+future: <Task finished name='Task-86876' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=UserIsBotError("Bots can't send messages to other bots (caused by SendMessageRequest)")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/tgBot/handlers/users/text.py", line 39, in crypto_handler
+    await BTCPayment().receipt_parser(bot, msg.from_user.id, msg.text)
+  File "/root/tgBot/utils/payments/btc.py", line 45, in receipt_parser
+    await self.banker_btc(bot, user_id, code)
+  File "/root/tgBot/utils/payments/btc.py", line 50, in banker_btc
+    await client.send_message(self.banker, f'/start {cheque}')
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/messages.py", line 872, in send_message
+    result = await self(request)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 84, in _call
+    result = await future
+telethon.errors.rpcerrorlist.UserIsBotError: Bots can't send messages to other bots (caused by SendMessageRequest)
+Task exception was never retrieved
+future: <Task finished name='Task-87110' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=UserIsBotError("Bots can't send messages to other bots (caused by SendMessageRequest)")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/tgBot/handlers/users/text.py", line 39, in crypto_handler
+    await BTCPayment().receipt_parser(bot, msg.from_user.id, msg.text)
+  File "/root/tgBot/utils/payments/btc.py", line 45, in receipt_parser
+    await self.banker_btc(bot, user_id, code)
+  File "/root/tgBot/utils/payments/btc.py", line 50, in banker_btc
+    await client.send_message(self.banker, f'/start {cheque}')
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/messages.py", line 872, in send_message
+    result = await self(request)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 84, in _call
+    result = await future
+telethon.errors.rpcerrorlist.UserIsBotError: Bots can't send messages to other bots (caused by SendMessageRequest)
+Task exception was never retrieved
+future: <Task finished name='Task-87142' coro=<Dispatcher._process_polling_updates() done, defined at /usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py:407> exception=UserIsBotError("Bots can't send messages to other bots (caused by SendMessageRequest)")>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "/usr/local/lib/python3.8/dist-packages/aiogram/dispatcher/handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "/root/tgBot/handlers/users/text.py", line 39, in crypto_handler
+    await BTCPayment().receipt_parser(bot, msg.from_user.id, msg.text)
+  File "/root/tgBot/utils/payments/btc.py", line 45, in receipt_parser
+    await self.banker_btc(bot, user_id, code)
+  File "/root/tgBot/utils/payments/btc.py", line 50, in banker_btc
+    await client.send_message(self.banker, f'/start {cheque}')
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/messages.py", line 872, in send_message
+    result = await self(request)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 30, in __call__
+    return await self._call(self._sender, request, ordered=ordered)
+  File "/usr/local/lib/python3.8/dist-packages/telethon/client/users.py", line 84, in _call
+    result = await future
+telethon.errors.rpcerrorlist.UserIsBotError: Bots can't send messages to other bots (caused by SendMessageRequest)

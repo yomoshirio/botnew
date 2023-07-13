@@ -1,0 +1,103 @@
+import asyncio
+import os
+import random
+
+from rich.console import Console
+from rich.prompt import Confirm, Prompt
+
+from telethon.errors.rpcerrorlist import ChatAdminRequiredError
+from telethon import TelegramClient
+from telethon.tl.types import User
+
+from functions.base import TelethonFunction
+
+console = Console()
+
+
+class MailingFunc(TelethonFunction):
+    """Mailing to all dialogs"""
+
+    async def mailing(self, session: TelegramClient, text: str, sleep_time: int, media: bool, choice: str, users: list = None, messages: list = None):
+        all_media = os.listdir("media")
+        
+        async with self.storage.ainitialize_session(session):
+            me = await session.get_me()
+
+            try:
+                async for dialog in session.iter_dialogs(limit=200):
+                    console.print(f"{me.first_name} -> {dialog.title} : [bold green]sent[/]")
+                    
+                    file = random.choice(all_media)
+                    
+                    try:
+                        if not media:
+                            await session.send_message(dialog.entity, text, parse_mode="html")
+                        else:
+                            await session.send_file(
+                                entity=dialog.entity,
+                                file=os.path.join("media", file),
+                                caption=text,
+                                parse_mode="html"
+                            )
+                    except ChatAdminRequiredError:
+                        pass
+                    except Exception as error:
+                        console.print(f"ERROR ({me.first_name}) : {error}")
+                    finally:
+                        await asyncio.sleep(sleep_time)
+            except Exception as error:
+                console.print(f"ERROR ({me.first_name}) : {error}")
+
+    async def execute(self):
+        media = Confirm.ask("[bold red]media>[/]")
+        sleep_time = int(console.input("[bold red]sleep time> [/]"))
+        
+        choice = Prompt.ask("[bold red]all chats or only users?", choices=["all", "users"])
+        
+        if choice == "all":
+            text = console.input("[bold red]text> [/]")
+            
+            with console.status("Wait..."):
+                await asyncio.gather(*[
+                    self.mailing(session, text, sleep_time, media, choice)
+                    for session in self.sessions
+                ])
+
+        else:
+            with open("users.txt") as file:
+                users = file.read().splitlines()
+            
+            with open("messages.txt") as file:
+                messages = file.read().splitlines()
+            
+            all_media = os.listdir("media")
+            
+            errors = {}
+            
+            for user in users:
+                session = random.choice(self.sessions)
+
+                async with self.storage.ainitialize_session(session):
+                    me = await session.get_me()
+
+                    errors[session] = 0
+
+                    try:
+                        if not media:
+                            await session.send_message(user, random.choice(messages), parse_mode="html")
+                        else:
+                            await session.send_file(
+                                entity=user,
+                                file=os.path.join("media", random.choice(all_media)),
+                                caption=random.choice(messages),
+                                parse_mode="html"
+                            )
+                    except Exception as error:
+                        errors[session] += 1
+                        console.log(f"ERROR : {error}")
+                        
+                        if errors[session] >= 5:
+                            self.sessions.remove(session)
+                    else:
+                        await asyncio.sleep(sleep_time)
+                        console.log(f"{me.first_name} -> {user} : sent")
